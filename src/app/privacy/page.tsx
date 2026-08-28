@@ -4,231 +4,145 @@ import SectionCard from "@/components/SectionCard";
 
 export const metadata = { title: "Privacy Policy — AzTU LMS App" };
 
+const lmsLink = (
+  <a
+    href="https://lms.aztu.edu.az"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-medium text-brand underline underline-offset-2 hover:text-brand-hover"
+  >
+    lms.aztu.edu.az
+  </a>
+);
+
 export default function PrivacyPage() {
   return (
-    <>
-      <div className="flex min-h-screen flex-col">
-        <Navbar />
+    <div className="flex min-h-screen flex-col">
+      <Navbar />
 
-        {/* Hero */}
-        <section className="bg-brand px-6 py-14 text-white">
-          <div className="mx-auto max-w-3xl">
-            <span className="mb-5 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium tracking-widest text-blue-200 uppercase">
-              <svg
-                width="11"
-                height="11"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-              Community Project · Independent
-            </span>
-            <h1 className="text-3xl leading-tight font-bold tracking-tight sm:text-4xl">Privacy Policy</h1>
-            <p className="mt-2 text-sm text-blue-200">AzTU LMS App · Effective date: March 3, 2025</p>
-          </div>
-        </section>
+      {/* Hero */}
+      <header>
+        <div className="mx-auto max-w-3xl px-6 pt-14 pb-8">
+          <p className="text-xs font-medium tracking-wide text-faint">Independent community project</p>
+          <h1 className="mt-3 text-3xl font-bold tracking-tight text-text sm:text-4xl">Privacy Policy</h1>
+          <p className="mt-3 text-[15px] text-muted">
+            How the AzTU LMS App handles your information. Effective March 3, 2025.
+          </p>
+        </div>
+      </header>
 
-        {/* Disclaimer */}
-        <div className="border-b border-blue-100 bg-brand-light">
-          <div className="mx-auto flex max-w-3xl items-start gap-3 px-6 py-4">
-            <span className="mt-0.5 text-lg text-brand">⚠️</span>
-            <p className="text-sm leading-relaxed text-brand-dark">
-              <span className="font-semibold">Independent Community Project.</span> This app is not an official product
-              of Azerbaijan Technical University (AzTU) or its IT team. AzTU is not affiliated with or responsible for
-              this project. Provided <span className="italic">&quot;as is&quot;</span> — use at your own risk.
-            </p>
-          </div>
+      <main className="mx-auto w-full max-w-3xl flex-1 space-y-4 px-6 pb-12">
+        {/* Disclaimer callout */}
+        <div className="rounded-2xl border border-warn-border bg-warn-tint px-5 py-4">
+          <p className="text-sm leading-relaxed text-warn-text">
+            This app is built and maintained independently. It is not an official product of Azerbaijan Technical
+            University, and the university is not involved in or responsible for it. It is provided as is.
+          </p>
         </div>
 
-        <main className="mx-auto w-full max-w-3xl flex-1 space-y-4 px-6 py-10">
-          <SectionCard icon="🔍" title="1. Overview">
-            <p>
-              This Privacy Policy explains how the AzTU LMS App handles information when you use it. The App is a
-              community-built mobile wrapper that provides a native experience for the official AzTU LMS at{" "}
-              <a
-                href="https://lms.aztu.edu.az"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-brand underline underline-offset-2 hover:text-brand-dark"
-              >
-                lms.aztu.edu.az
-              </a>
-              .
-            </p>
-            <p className="mt-3">
-              The App has <strong>no database of its own</strong>. All academic data, courses, and content are fetched
-              directly from AzTU&apos;s own API endpoints. We do not store, mirror, or retain any of that data.
-            </p>
-          </SectionCard>
+        <SectionCard number={1} title="What this app is">
+          <p>
+            The AzTU LMS App is a community-built wrapper that gives the official AzTU learning platform, {lmsLink}, a
+            native mobile experience. It has no backend of its own. Everything you see — courses, grades, assignments,
+            announcements — is fetched directly from the university&apos;s own systems and is never stored or copied
+            elsewhere.
+          </p>
+        </SectionCard>
 
-          <SectionCard icon="🔐" title="2. Credentials & Local Storage">
-            <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
+        <SectionCard number={2} title="Your login details">
+          <p>
+            Signing in requires your student ID and password. Both are kept only on your device, in the operating
+            system&apos;s encrypted, sandboxed storage. They are used to request a session token from the LMS, which is
+            renewed roughly once an hour.
+          </p>
+          <p>
+            Your credentials are sent only to {lmsLink}. They are never transmitted to the developer, to any third
+            party, or to any cloud service, and the developer has no way to see them.
+          </p>
+        </SectionCard>
+
+        <SectionCard number={3} title="No servers, no tracking">
+          <p>
+            There is no server behind this app and no database. It runs no analytics, crash reporting, or advertising,
+            and it collects no usage data. Nothing about how you use the app leaves your phone.
+          </p>
+        </SectionCard>
+
+        <SectionCard number={4} title="The LMS belongs to AzTU">
+          <p>
+            Because the app talks straight to the university&apos;s systems, any data handled during your session lives
+            on AzTU&apos;s servers and is governed by the university&apos;s own policies and security.
+          </p>
+          <p>
+            This project has no control over that infrastructure. For anything to do with how the university stores or
+            handles your data — including outages or security incidents on its side — contact AzTU directly.
+          </p>
+        </SectionCard>
+
+        <SectionCard number={5} title="Children">
+          <p>
+            The app is meant for university students and is not directed at children under 13. Since it collects no data
+            of its own, it does not knowingly gather information from anyone.
+          </p>
+        </SectionCard>
+
+        <SectionCard number={6} title="Provided as is">
+          <p>
+            The app comes without warranties of any kind. It depends entirely on the AzTU LMS, so its availability and
+            accuracy can&apos;t be guaranteed, and the developer isn&apos;t liable for issues that originate on the
+            university&apos;s servers, its network, or your device&apos;s storage.
+          </p>
+        </SectionCard>
+
+        <SectionCard number={7} title="Changes to this policy">
+          <p>
+            This policy may change as the app evolves. When it does, the effective date at the top of the page is
+            updated. Continuing to use the app means you accept the current version.
+          </p>
+        </SectionCard>
+
+        <SectionCard number={8} title="Contact">
+          <p>
+            Questions about the app or this policy are welcome. Note that this isn&apos;t an official support channel —
+            for LMS login problems, course issues, or grade disputes, reach out to your university.
+          </p>
+          <div className="flex flex-wrap gap-3 pt-1">
+            <a
+              href="https://github.com/yusifaliyevpro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface-muted px-4 py-2.5 text-sm font-medium text-text transition-colors hover:border-border-strong"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="mailto:yusifaliyevpro@gmail.com"
+              className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface-muted px-4 py-2.5 text-sm font-medium text-text transition-colors hover:border-border-strong"
+            >
               <svg
-                width="11"
-                height="11"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2.5"
+                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                aria-hidden="true"
               >
-                <polyline points="20 6 9 17 4 12" />
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
               </svg>
-              Stored locally on your device only — never uploaded
-            </div>
-            <p>
-              To authenticate with the AzTU LMS platform, the App asks for your <strong>student ID and password</strong>
-              . These credentials are stored exclusively on your device using an encrypted, OS-level sandboxed storage.
-            </p>
-            <ul className="mt-3 space-y-2">
-              <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-brand">→</span>
-                <span>
-                  Credentials are used <strong>only</strong> to obtain a JWT token from AzTU&apos;s servers, refreshed
-                  approximately every 1 hour.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-brand">→</span>
-                <span>
-                  Your student ID and password are <strong>never sent</strong> to any server other than{" "}
-                  <code className="rounded bg-slate-100 px-1 font-mono text-xs text-slate-700">lms.aztu.edu.az</code>.
-                  They are never uploaded to the developer, any third party, or any cloud.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-brand">→</span>
-                <span>
-                  The developer has <strong>zero access</strong> to your credentials at any point.
-                </span>
-              </li>
-            </ul>
-          </SectionCard>
+              Email
+            </a>
+          </div>
+        </SectionCard>
+      </main>
 
-          <SectionCard icon="🗄️" title="3. No Developer Database">
-            <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
-              <svg
-                width="11"
-                height="11"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              No backend · No database · No analytics
-            </div>
-            <p>
-              The App has no backend server and no database. It does not collect, log, or store any user data on
-              external servers. There is no analytics SDK, crash reporting service, or advertising framework integrated
-              into the App.
-            </p>
-            <p className="mt-3">
-              All data you interact with — grades, courses, assignments, announcements — belongs to and is served
-              entirely by AzTU&apos;s own infrastructure.
-            </p>
-          </SectionCard>
-
-          <SectionCard icon="🌐" title="4. AzTU LMS Platform (Third-Party)">
-            <p>
-              Because the App connects directly to AzTU&apos;s API endpoints, any data processed during your session is
-              handled by <strong>Azerbaijan Technical University&apos;s own servers</strong> under their own policies
-              and security measures.
-            </p>
-            <p className="mt-3">
-              The developer of this App is <strong>not responsible for</strong> any data handling, security incidents,
-              service outages, data breaches, or privacy practices on the part of the AzTU LMS servers or the
-              university&apos;s IT infrastructure. For questions about how the university handles your data, contact
-              AzTU directly.
-            </p>
-          </SectionCard>
-
-          <SectionCard icon="👶" title="5. Children's Privacy">
-            <p>
-              The App is intended for university students and is not directed at children under the age of 13. Since no
-              data is collected by the App itself, there is no risk of inadvertent data collection from any age group.
-            </p>
-          </SectionCard>
-
-          <SectionCard icon="⚖️" title="6. Disclaimer & Limitation of Liability">
-            <p>
-              This App is provided <strong>&quot;as is&quot;</strong> without warranties of any kind. The developer
-              makes no guarantees regarding the availability, accuracy, or security of the AzTU LMS platform accessed
-              through the App.
-            </p>
-            <p className="mt-3">
-              The developer is <strong>not responsible</strong> for any loss of data, unauthorized access, or damage
-              arising from issues on AzTU&apos;s servers, the university&apos;s network, or your device&apos;s secure
-              storage. AzTU and its IT department are not affiliated with this project and bear no responsibility for
-              it.
-            </p>
-          </SectionCard>
-
-          <SectionCard icon="📝" title="7. Changes to This Policy">
-            <p>
-              This Privacy Policy may be updated if the App&apos;s functionality changes. Any updates will be reflected
-              with a revised effective date at the top of this page. Continued use of the App after changes constitutes
-              acceptance of the updated policy.
-            </p>
-          </SectionCard>
-
-          <SectionCard icon="✉️" title="8. Contact">
-            <p>
-              This is an independent community project. The developer is <strong>not responsible</strong> for anything
-              that occurs on AzTU&apos;s LMS servers or university infrastructure. For official university matters,
-              contact AzTU directly.
-            </p>
-            <p className="mt-3">For questions specifically about this App and its privacy practices:</p>
-            <div className="mt-4 flex flex-wrap gap-3">
-              <a
-                href="https://github.com/yusifaliyevpro"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-brand/30 bg-brand-light px-4 py-2.5 text-sm font-medium text-brand transition-colors hover:bg-brand hover:text-white"
-              >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                </svg>
-                GitHub
-              </a>
-              <a
-                href="mailto:yusifaliyevpro@gmail.com"
-                className="inline-flex items-center gap-2 rounded-lg border border-brand/30 bg-brand-light px-4 py-2.5 text-sm font-medium text-brand transition-colors hover:bg-brand hover:text-white"
-              >
-                <svg
-                  width="15"
-                  height="15"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect width="20" height="16" x="2" y="4" rx="2" />
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                </svg>
-                Email
-              </a>
-            </div>
-            <p className="mt-4 text-xs text-slate-400">
-              Note: This is not an official AzTU support channel. For LMS login issues, course problems, or grade
-              disputes, please contact your university directly.
-            </p>
-          </SectionCard>
-        </main>
-
-        <Footer />
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 }

@@ -1,27 +1,19 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 type SectionCardProps = {
-  icon: string;
+  number: number;
   title: string;
   children: ReactNode;
 };
 
-export default function SectionCard({
-  icon,
-  title,
-  children,
-}: SectionCardProps) {
+export default function SectionCard({ number, title, children }: SectionCardProps) {
   return (
-    <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-      <div className="flex items-center gap-3 mb-4">
-        <span className="text-xl leading-none">{icon}</span>
-        <h2 className="font-semibold text-slate-800 text-base tracking-tight">
-          {title}
-        </h2>
+    <section className="rounded-2xl border border-border bg-surface p-6 sm:p-8">
+      <div className="mb-4 flex items-baseline gap-3">
+        <span className="text-sm font-semibold text-brand tabular-nums">{number.toString().padStart(2, "0")}</span>
+        <h2 className="text-lg font-semibold tracking-tight text-text">{title}</h2>
       </div>
-      <div className="text-sm text-slate-600 leading-relaxed">
-        <>{children}</>
-      </div>
-    </div>
+      <div className="space-y-3 text-[15px] leading-relaxed text-muted">{children}</div>
+    </section>
   );
 }
