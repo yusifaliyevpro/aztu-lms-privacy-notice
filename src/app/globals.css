@@ -1,17 +1,100 @@
 @import "tailwindcss";
 
-@theme {
-  --color-brand: #1e56a0;
-  --color-brand-dark: #163f7a;
-  --color-brand-light: #e8f0fb;
+/* Semantic tokens — light theme is the default, dark theme follows the
+   browser's prefers-color-scheme. No manual switch. */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-muted: #f1f4f8;
+  --border: #e4e7ec;
+  --border-strong: #d3d8e0;
+
+  --text: #1a2333;
+  --text-muted: #5b6472;
+  --text-faint: #8a919e;
+
+  --brand: #1e56a0;
+  --brand-hover: #163f7a;
+  --brand-contrast: #ffffff;
+  --brand-tint: #e8f0fb;
+
+  --accent: #0f766e;
+  --accent-tint: #e6f4f1;
+
+  --warn-tint: #fdf6ec;
+  --warn-border: #f0e2c8;
+  --warn-text: #7a5b19;
+
+  --code-bg: #f1f4f8;
+  --code-text: #334155;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c0f16;
+    --surface: #141922;
+    --surface-muted: #1b212c;
+    --border: #232a36;
+    --border-strong: #2f3846;
+
+    --text: #e7ecf3;
+    --text-muted: #a3adbd;
+    --text-faint: #6f7a8a;
+
+    --brand: #6ea6f0;
+    --brand-hover: #8fbcf5;
+    --brand-contrast: #0c0f16;
+    --brand-tint: #172032;
+
+    --accent: #3fd0be;
+    --accent-tint: #10221f;
+
+    --warn-tint: #241d0f;
+    --warn-border: #3a2f14;
+    --warn-text: #e0c079;
+
+    --code-bg: #1b212c;
+    --code-text: #c4ccd8;
+  }
+}
+
+/* Map tokens into Tailwind's color scale so `bg-surface`, `text-muted`, etc.
+   resolve to the theme-aware variables above. */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-faint: var(--text-faint);
+
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-contrast: var(--brand-contrast);
+  --color-brand-tint: var(--brand-tint);
+
+  --color-accent: var(--accent);
+  --color-accent-tint: var(--accent-tint);
+
+  --color-warn-tint: var(--warn-tint);
+  --color-warn-border: var(--warn-border);
+  --color-warn-text: var(--warn-text);
+
+  --color-code-bg: var(--code-bg);
+  --color-code-text: var(--code-text);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    color-scheme: light dark;
   }
   body {
     font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
 }

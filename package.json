@@ -1,10 +1,18 @@
 {
   "name": "aztu-lms-site",
   "version": "1.0.0",
+  "license": "AGPL-3.0-only",
+  "author": {
+    "name": "Yusif Aliyev",
+    "email": "yusifaliyevpro@gmail.com",
+    "url": "https://yusifaliyevpro.com"
+  },
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "check": "greenly",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
     "lint": "oxlint",
