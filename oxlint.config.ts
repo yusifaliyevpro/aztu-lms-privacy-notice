@@ -11,7 +11,6 @@ export default defineConfig({
   },
   rules: {
     eqeqeq: "warn",
-    "no-underscore-dangle": ["warn", { allow: ["_count", "_sum", "_avg", "_min", "_max"] }],
     "no-throw-literal": "warn",
     "import/no-unassigned-import": ["warn", { allow: ["**/globals.css"] }],
     "unicorn/prefer-node-protocol": "warn",
