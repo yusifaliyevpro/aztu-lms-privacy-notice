@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — AzTU LMS App",
+  title: "Privacy Policy | AzTU LMS App",
   description: "Privacy policy for the AzTU LMS community-built mobile app.",
 };
 
