@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import SectionCard from "@/components/SectionCard";
 
-export const metadata = { title: "Privacy Policy — AzTU LMS App" };
+export const metadata = { title: "Privacy Policy | AzTU LMS App" };
 
 const lmsLink = (
   <a
@@ -42,69 +42,69 @@ export default function PrivacyPage() {
 
         <SectionCard number={1} title="What this app is">
           <p>
-            The AzTU LMS App is a community-built wrapper that gives the official AzTU learning platform, {lmsLink}, a
-            native mobile experience. It has no backend of its own. Everything you see — courses, grades, assignments,
-            announcements — is fetched directly from the university&apos;s own systems and is never stored or copied
-            elsewhere.
+            The AzTU LMS App is a community-built app that wraps the official AzTU learning platform, {lmsLink}, so it
+            feels native on your phone. It has no backend of its own. Everything you see, like courses, grades,
+            assignments, and announcements, is loaded straight from the university&apos;s own systems. Nothing is stored
+            or copied anywhere else.
           </p>
         </SectionCard>
 
         <SectionCard number={2} title="Your login details">
           <p>
-            Signing in requires your student ID and password. Both are kept only on your device, in the operating
-            system&apos;s encrypted, sandboxed storage. They are used to request a session token from the LMS, which is
-            renewed roughly once an hour.
+            To sign in, the app needs your student ID and password. Both stay only on your device, in secure storage
+            that the operating system encrypts and keeps private to the app. They are used to get a session token from
+            the LMS, which is renewed about once an hour.
           </p>
           <p>
-            Your credentials are sent only to {lmsLink}. They are never transmitted to the developer, to any third
-            party, or to any cloud service, and the developer has no way to see them.
+            Your login details are sent only to {lmsLink}. They never go to the developer, to any other company, or to
+            any cloud service, and the developer cannot see them.
           </p>
         </SectionCard>
 
         <SectionCard number={3} title="No servers, no tracking">
           <p>
-            There is no server behind this app and no database. It runs no analytics, crash reporting, or advertising,
-            and it collects no usage data. Nothing about how you use the app leaves your phone.
+            There is no server behind this app and no database. It has no analytics, no crash reporting, and no ads, and
+            it collects nothing about how you use it. None of your activity leaves your phone.
           </p>
         </SectionCard>
 
         <SectionCard number={4} title="The LMS belongs to AzTU">
           <p>
-            Because the app talks straight to the university&apos;s systems, any data handled during your session lives
-            on AzTU&apos;s servers and is governed by the university&apos;s own policies and security.
+            Because the app talks straight to the university&apos;s systems, any data used during your session stays on
+            AzTU&apos;s servers and follows the university&apos;s own rules and security.
           </p>
           <p>
-            This project has no control over that infrastructure. For anything to do with how the university stores or
-            handles your data — including outages or security incidents on its side — contact AzTU directly.
+            This project does not control those systems. For anything about how the university keeps or handles your
+            data, including outages or security problems on their side, contact AzTU directly.
           </p>
         </SectionCard>
 
         <SectionCard number={5} title="Children">
           <p>
-            The app is meant for university students and is not directed at children under 13. Since it collects no data
-            of its own, it does not knowingly gather information from anyone.
+            The app is made for university students and is not aimed at children under 13. Because it collects no data of
+            its own, it does not gather information from anyone.
           </p>
         </SectionCard>
 
         <SectionCard number={6} title="Provided as is">
           <p>
-            The app comes without warranties of any kind. It depends entirely on the AzTU LMS, so its availability and
-            accuracy can&apos;t be guaranteed, and the developer isn&apos;t liable for issues that originate on the
+            The app comes with no warranty of any kind. It fully depends on the AzTU LMS, so there is no promise that it
+            will always work or always be correct. The developer is also not responsible for problems that start on the
             university&apos;s servers, its network, or your device&apos;s storage.
           </p>
         </SectionCard>
 
         <SectionCard number={7} title="Changes to this policy">
           <p>
-            This policy may change as the app evolves. When it does, the effective date at the top of the page is
-            updated. Continuing to use the app means you accept the current version.
+            This policy may change as the app grows. When it does, the effective date at the top of the page will change
+            too. If you keep using the app, that means you accept the current version.
           </p>
         </SectionCard>
 
         <SectionCard number={8} title="Contact">
           <p>
-            Questions about the app or this policy are welcome. Note that this isn&apos;t an official support channel —
-            for LMS login problems, course issues, or grade disputes, reach out to your university.
+            Questions about the app or this policy are welcome. Please note this is not an official support channel. For
+            LMS login problems, course issues, or grade disputes, contact your university.
           </p>
           <div className="flex flex-wrap gap-3 pt-1">
             <a
@@ -117,26 +117,6 @@ export default function PrivacyPage() {
                 <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
               </svg>
               GitHub
-            </a>
-            <a
-              href="mailto:yusifaliyevpro@gmail.com"
-              className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface-muted px-4 py-2.5 text-sm font-medium text-text transition-colors hover:border-border-strong"
-            >
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <rect width="20" height="16" x="2" y="4" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-              Email
             </a>
           </div>
         </SectionCard>
