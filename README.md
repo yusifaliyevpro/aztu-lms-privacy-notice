@@ -39,4 +39,4 @@ Licensed under the [GNU AGPL-3.0](./LICENSE).
 
 ## Author
 
-**Yusif Aliyev** · [@yusifaliyevpro](https://github.com/yusifaliyevpro) · yusifaliyevpro@gmail.com
+**Yusif Aliyev** · [@yusifaliyevpro](https://github.com/yusifaliyevpro)
