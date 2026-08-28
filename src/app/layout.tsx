@@ -9,16 +9,10 @@ export const metadata: Metadata = {
   description: "Privacy policy for the AzTU LMS community-built mobile app.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="min-h-screen flex flex-col bg-white text-slate-800">
-        {children}
-      </body>
+      <body className="flex min-h-screen flex-col bg-bg text-text">{children}</body>
     </html>
   );
 }
