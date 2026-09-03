@@ -81,8 +81,8 @@ export default function PrivacyPage() {
 
         <SectionCard number={5} title="Children">
           <p>
-            The app is made for university students and is not aimed at children under 13. Because it collects no data of
-            its own, it does not gather information from anyone.
+            The app is made for university students and is not aimed at children under 13. Because it collects no data
+            of its own, it does not gather information from anyone.
           </p>
         </SectionCard>
 
