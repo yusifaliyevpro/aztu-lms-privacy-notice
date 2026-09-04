@@ -27,7 +27,7 @@
     "@tailwindcss/postcss": "4.3.3",
     "@types/node": "24.13.3",
     "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.5",
+    "@types/react-dom": "19.2.7",
     "greenly": "1.1.6",
     "oxfmt": "0.66.0",
     "oxlint": "1.81.0",
