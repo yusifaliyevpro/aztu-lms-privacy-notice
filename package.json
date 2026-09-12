@@ -1,5 +1,5 @@
 {
-  "name": "aztu-lms-site",
+  "name": "aztu-lms-privacy-notice",
   "version": "1.0.0",
   "license": "AGPL-3.0-only",
   "author": {
@@ -19,18 +19,18 @@
     "lint:fix": "oxlint --fix"
   },
   "dependencies": {
-    "next": "16.3.4",
+    "next": "16.3.5",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.3",
-    "@types/node": "24.13.3",
+    "@types/node": "24.13.4",
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.7",
     "greenly": "1.1.6",
-    "oxfmt": "0.66.0",
-    "oxlint": "1.81.0",
+    "oxfmt": "0.67.0",
+    "oxlint": "1.82.0",
     "oxlint-tsgolint": "7.0.2001",
     "postcss-load-config": "6.0.1",
     "tailwindcss": "4.3.3",
