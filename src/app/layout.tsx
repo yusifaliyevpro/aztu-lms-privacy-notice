@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: "Privacy policy for the AzTU LMS community-built mobile app.",
 };
 
+export const ensureStatic = "navigation";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.className}>
